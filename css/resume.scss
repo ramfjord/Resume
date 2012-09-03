@@ -55,7 +55,8 @@ body {
 .header {
   width:600px;
   .name {
-    @include fancy-font;
+    font-family: headers;
+    font-size: 62px;
     //border-bottom:1px solid gray;
   }
   .blurb {

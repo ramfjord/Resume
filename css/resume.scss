@@ -1,0 +1,108 @@
+$unitpx: 7px;
+
+@font-face {
+  font-family: inconsolata;
+  src: url('../fonts/Inconsolata-BoldPunct.ttf');
+}
+
+@font-face {
+  font-family: headers;
+  // src: url('Inconsolata-BoldPunct.ttf');
+  // src: url('../fonts/Latine.ttf');
+  // src: url('../fonts/DroidSerif-Regular.ttf');
+  // src: url('../fonts/FreeSerif.ttf');
+  // src: url('../fonts/GenBkBasR.ttf');
+  // src: url('../fonts/Latine.ttf');
+  // src: url('../fonts/romanuni.ttf');
+  src: url('../fonts/Symbola.otf');
+
+  //src: url('../fonts/Junicode-Regular.ttf');
+}
+
+@mixin fancy-font {
+  font-family: headers;
+  font-size: 27px;
+}
+
+body {
+  font-family: inconsolata;
+  font-size: 12px;
+}
+
+.row:after,
+.row:before {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row {
+  margin-bottom: 20px;
+  &:after {
+    clear:both;
+  }
+}
+
+.col {
+  float:left;
+}
+
+.container {
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  width:600px;
+  .name {
+    @include fancy-font;
+    //border-bottom:1px solid gray;
+  }
+  .blurb {
+  }
+}
+.contact {
+  width:200px;
+  text-align:center;
+}
+
+.section-desc {
+  width:80px;
+  text-align: right;
+  margin-top:20px;
+  padding:5px 10px 0 10px;
+  border-top:1px solid gray;
+  @include fancy-font;
+}
+
+.section-content {
+  padding:5px 0px 5px 10px;
+  border-left:1px solid gray;
+  width:600px;
+}
+
+.element {
+  margin-bottom:10px;
+}
+
+.title div {
+  display:inline-block;
+  font-size:14px;
+}
+.time {
+  float:right;
+}
+
+ul {
+  margin:0 0;
+}
+
+.skill-group {
+  width:190px;
+  margin-right:5px;
+  .skill {
+    padding:0 3px;
+    border: 1px solid gray;
+    margin:1px 0;
+  }
+}

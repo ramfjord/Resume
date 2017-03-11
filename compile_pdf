@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! $(which wkhtmltopdf) ] ; then
+  echo "Plase install wkhtmltopdf - on mac I'm currently using homebrew + Caskroom/cask/wkhtmltopdf to install"
+  exit 1
+fi
+  
+wkhtmltopdf resume.html resume.pdf
